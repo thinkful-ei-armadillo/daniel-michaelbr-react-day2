@@ -18,6 +18,7 @@ class App extends Component{
         </header>
         <div className="participantList">
           <ParticipantList
+            key={store.participants.id}
             avatar={store.participants.avatar}
             name={store.participants.name}
             onStage={store.participants.onStage}
