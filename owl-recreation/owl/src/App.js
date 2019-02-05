@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import ParticipantList from './participants';
+import Stage from './stage';
+import Chat from './chat';
 
 class App extends Component{
   static defaultProps = {
@@ -24,8 +26,22 @@ class App extends Component{
             onStage={store.participants.onStage}
             />
         </div>
-        <div className="chatLog">
-        
+        <div className="stage-container">
+          <Stage
+          key={store.participants.id}
+          avatar={store.participants.avatar}
+          name={store.participants.name}
+          onStage={store.participants.onStage}
+          />
+        </div>
+        <div className="chatLog-container">
+          <Chat
+          key={store.chatEvents.participantId}
+          type={store.chatEvents.type}
+          message={store.chatEvents.message}
+          time={store.chatEvents.time}
+          timestamp={store.chatEvents.timestamp}
+          />
         </div>
       </div>
     );
