@@ -1,0 +1,15 @@
+.participantList{
+    margin-left: 10px;
+}
+
+.list{
+    border: 3px solid black;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    height: 100px;
+}

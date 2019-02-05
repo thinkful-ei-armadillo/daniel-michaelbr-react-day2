@@ -1,5 +1,6 @@
 import React from 'react';
 import STORE from './store';
+import './stage.css';
 
 function Stage(props){
   let staged = [];
@@ -13,7 +14,7 @@ function Stage(props){
 
   return (
     <div className="stage">
-      {staged.map(staged => <p><img src={staged.avatar} alt="avatar"/>{staged.name}</p>)}
+      {staged.map(staged => <p><img src={staged.avatar} alt="avatar"/><br/>{staged.name}</p>)}
     </div>
   );
   }

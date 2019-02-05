@@ -1,5 +1,6 @@
 import React from 'react';
 import STORE from './store';
+import './chat.css';
 
 function Chat(props){
 
@@ -33,9 +34,9 @@ function Chat(props){
   return (
     <div className="chatLog">
       <div>{STORE.chatEvents.map(chatEvents => <ul>
-        <li>{STORE.participants.find( val => val.id === chatEvents.participantId).name}</li>
-        <li>{new Date(chatEvents.timestamp).getHours()}:{new Date(chatEvents.timestamp).getMinutes()}</li>
-        <li>{chatEvents.message}</li>
+        <li><b>{STORE.participants.find( val => val.id === chatEvents.participantId).name}</b> | {new Date(chatEvents.timestamp).getHours()}:{new Date(chatEvents.timestamp).getMinutes()}</li>
+        {/* <li>{new Date(chatEvents.timestamp).getHours()}:{new Date(chatEvents.timestamp).getMinutes()}</li> */}
+        <li><i>{chatEvents.message}</i></li>
         </ul>)}</div>
     </div>
   );

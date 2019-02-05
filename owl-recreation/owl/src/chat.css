@@ -1,0 +1,10 @@
+.chatLog{
+    display: block;
+    float: right;
+    border: 3px solid black;
+    text-align: left;
+}
+
+ul{
+    padding: 5px;
+}

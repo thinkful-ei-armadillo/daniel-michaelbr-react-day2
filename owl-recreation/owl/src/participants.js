@@ -1,5 +1,6 @@
 import React from 'react';
 import STORE from './store';
+import './participants.css';
 
 function ParticipantList(props){
     let staged = [];

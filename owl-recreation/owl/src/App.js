@@ -15,10 +15,8 @@ class App extends Component{
     const {store} = this.props;
     return (
       <div className="container">
-        <header>
-          <h1>Owl</h1>
-        </header>
         <div className="participantList">
+          <h2>Participants</h2>
           <ParticipantList
             key={store.participants.id}
             avatar={store.participants.avatar}
@@ -27,6 +25,7 @@ class App extends Component{
             />
         </div>
         <div className="stage-container">
+          <h2>Stage</h2>
           <Stage
           key={store.participants.id}
           avatar={store.participants.avatar}
@@ -35,6 +34,7 @@ class App extends Component{
           />
         </div>
         <div className="chatLog-container">
+          <h2>Chat</h2>
           <Chat
           key={store.chatEvents.participantId}
           type={store.chatEvents.type}
